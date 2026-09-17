@@ -1,75 +1,75 @@
-# React + TypeScript + Vite
+# TaskFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern task management application built with React and TypeScript.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Create tasks with title, category, and status
+- Filter tasks by All, Active, and Completed
+- Toggle task status
+- Delete tasks
+- Persist tasks using browser localStorage
+- Responsive and clean user interface
+- Type-safe development with TypeScript
+- Immutable state updates using functional programming concepts
+- Custom generic `useLocalStorage` hook
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- CSS
+- Browser localStorage
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```text
+src/
+├── components/
+│   ├── FilterTabs.tsx
+│   ├── TaskForm.tsx
+│   └── TaskItem.tsx
+├── hooks/
+│   └── useLocalStorage.ts
+├── types/
+│   └── task.ts
+├── App.tsx
+├── App.css
+├── index.css
+└── main.tsx
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Clone the repository:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+git clone <your-repository-url>
 
-```
+Navigate to the project:
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+cd taskflow
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Install dependencies:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm install
 
-```
+Run the development server:
+
+npm run dev
+
+Open the local URL shown in the terminal.
+
+Concepts Applied
+
+This project was developed as part of TypeScript and React learning, with practical application of:
+
+Type aliases
+Union types
+Generics
+React props
+React state
+Event handling
+Array map() and filter()
+Immutable state updates
+Custom React hooks
+Browser localStorage
