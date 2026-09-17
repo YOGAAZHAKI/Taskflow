@@ -19,6 +19,17 @@ TaskFlow helps users create, organize, filter, update, and delete tasks while ke
 - Immutable state updates using functional programming concepts
 - Custom generic `useLocalStorage` React hook
 
+## Screenshots
+
+### TaskFlow Dashboard
+
+![TaskFlow Dashboard](public/taskflow-dashboard.png)
+
+### Task Management
+
+![Task Management](public/taskflow-task.png)
+![Task Management](public/taskflow-tasks.png)
+
 ## Tech Stack
 
 - React
